@@ -3,7 +3,7 @@ const fs = require('fs');
 const express = require('express')
 const bodyParser = require('body-parser')
 const app = express();
-const port = 3001;
+const port = process.env.PORT;
 const cors = require('cors');
 const DAL = require('./dataAccessLayer')
 const ObjectId = require('mongodb').ObjectId;
@@ -86,8 +86,4 @@ app.put('/api/products/:id', cors(), async function (req, res){
 })
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> c44b384669d28d11dee370f82db5ead818e7cf5a
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
